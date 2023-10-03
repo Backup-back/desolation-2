@@ -11,7 +11,10 @@ version = project.mod_version
 group = project.maven_group
 
 repositories {
-	maven { url 'https://dl.cloudsmith.io/public/geckolib3/geckolib/maven/' }
+	maven {
+		name = 'GeckoLib'
+		url 'https://dl.cloudsmith.io/public/geckolib3/geckolib/maven/'
+	}
 	maven { url "https://maven.shedaniel.me/" }
 	maven {
 		name = "dblsaiko"
@@ -30,7 +33,7 @@ repositories {
 	}
 	maven {
 		name = "Ladysnake Libs"
-		url = "https://ladysnake.jfrog.io/artifactory/mods"
+		url = "https://maven.ladysnake.org/releases"
 	}
 
 	// TerraBlender (Biolith dev dep for now)
@@ -50,12 +53,6 @@ dependencies {
 
 	include(modApi("me.shedaniel.cloth:cloth-config-fabric:${project.cloth_config_version}")) {
 		exclude(group: "net.fabricmc.fabric-api")
-	}
-
-	include(modApi("software.bernie.geckolib:geckolib-fabric-${project.minecraft_version}:${project.geckolib_version}"))
-
-	include(modApi("com.terraformersmc:biolith:${biolith_version}")) {
-		exclude(group: "com.github.glitchfiend")
 	}
 	
     modImplementation 'com.github.glitchfiend:TerraBlender-fabric:1.19.2-2.0.1.166'
@@ -115,10 +112,6 @@ sourceSets {
 			]
 		}
 	}
-}
-
-quiltflower {
-	addToRuntimeClasspath.set(true)
 }
 
 java {
