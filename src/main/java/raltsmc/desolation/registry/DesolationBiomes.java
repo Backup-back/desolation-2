@@ -1,8 +1,6 @@
 package raltsmc.desolation.registry;
 
-import net.fabricmc.fabric.api.datagen.v1.provider.FabricDynamicRegistryProvider;
-import net.minecraft.registry.RegistryKey;
-import net.minecraft.registry.RegistryKeys;
+import net.minecraft.util.registry.RegistryKey;
 import net.minecraft.world.biome.Biome;
 import raltsmc.desolation.Desolation;
 import raltsmc.desolation.world.biome.BiomeCreator;

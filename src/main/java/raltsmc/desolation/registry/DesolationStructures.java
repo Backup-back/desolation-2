@@ -1,9 +1,8 @@
 package raltsmc.desolation.registry;
 
 import com.mojang.serialization.Codec;
-import net.minecraft.registry.Registries;
-import net.minecraft.registry.Registry;
 import net.minecraft.structure.StructurePieceType;
+import net.minecraft.util.registry.Registry;
 import net.minecraft.world.gen.structure.Structure;
 import net.minecraft.world.gen.structure.StructureType;
 import raltsmc.desolation.Desolation;

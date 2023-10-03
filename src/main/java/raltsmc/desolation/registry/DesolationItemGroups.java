@@ -25,7 +25,6 @@ public class DesolationItemGroups {
    */
   private static final Item BUILDING_WOOD_ITEMS = Items.MANGROVE_BUTTON;
   private static final Item FOOD_BERRIES = Items.GLOW_BERRIES;
-  private static final Item FUNCTIONAL_SIGN = Items.CHERRY_HANGING_SIGN;
   private static final Item INGREDIENTS_COAL = Items.CHARCOAL;
   private static final Item NATURAL_DIRT_ITEMS = Items.FARMLAND;
   private static final Item NATURAL_GRASS = Items.GRASS;
