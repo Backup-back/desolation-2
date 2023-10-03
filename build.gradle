@@ -15,7 +15,9 @@ repositories {
         name = 'GeckoLib'
         url 'https://dl.cloudsmith.io/public/geckolib3/geckolib/maven/'
     }
-    maven { url "https://maven.shedaniel.me/" }
+    maven {
+		url "https://maven.shedaniel.me/" 
+	}
     maven {
         name = "dblsaiko"
         url = "https://maven.dblsaiko.net/"
@@ -34,7 +36,7 @@ repositories {
     maven {
         name = "Ladysnake Libs"
         url = "https://maven.ladysnake.org/releases"
-    }
+    }	
 
     // TerraBlender (Biolith dev dep for now)
     maven {
