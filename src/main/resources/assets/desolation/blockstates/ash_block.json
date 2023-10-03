@@ -1,5 +1,7 @@
 {
   "variants": {
-    "": { "model": "desolation:block/ash_block" }
+    "": {
+      "model": "desolation:block/ash_block"
+    }
   }
 }

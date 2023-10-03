@@ -9,12 +9,12 @@ import net.minecraft.world.BlockView;
 import raltsmc.desolation.registry.DesolationBlocks;
 
 public class CharredSaplingBlock extends SaplingBlock {
-    public CharredSaplingBlock(SaplingGenerator generator, Settings settings) {
-        super(generator, settings);
-    }
-
-    @Override
-    protected boolean canPlantOnTop(BlockState floor, BlockView world, BlockPos pos) {
-        return floor.isIn(BlockTags.DIRT) || floor.isOf(DesolationBlocks.CHARRED_SOIL);
-    }
+  public CharredSaplingBlock(SaplingGenerator generator, Settings settings) {
+    super(generator, settings);
+  }
+  
+  @Override
+  protected boolean canPlantOnTop(BlockState floor, BlockView world, BlockPos pos) {
+    return floor.isIn(BlockTags.DIRT) || floor.isOf(DesolationBlocks.CHARRED_SOIL);
+  }
 }

@@ -11,19 +11,19 @@ import java.util.concurrent.CompletableFuture;
 
 @SuppressWarnings("UnstableApiUsage")
 public class DesolationDynamicRegistryProvider extends FabricDynamicRegistryProvider {
-	protected DesolationDynamicRegistryProvider(FabricDataOutput output, CompletableFuture<RegistryWrapper.WrapperLookup> registriesFuture) {
-		super(output, registriesFuture);
-	}
-
-	@Override
-	public void configure(RegistryWrapper.WrapperLookup registries, Entries entries) {
-		DesolationConfiguredFeatures.populate(entries);
-		DesolationPlacedFeatures.populate(entries);
-		DesolationBiomes.populate(entries);
-	}
-
-	@Override
-	public String getName() {
-		return "Desolation";
-	}
+  protected DesolationDynamicRegistryProvider(FabricDataOutput output, CompletableFuture<RegistryWrapper.WrapperLookup> registriesFuture) {
+    super(output, registriesFuture);
+  }
+  
+  @Override
+  public void configure(RegistryWrapper.WrapperLookup registries, Entries entries) {
+    DesolationConfiguredFeatures.populate(entries);
+    DesolationPlacedFeatures.populate(entries);
+    DesolationBiomes.populate(entries);
+  }
+  
+  @Override
+  public String getName() {
+    return "Desolation";
+  }
 }

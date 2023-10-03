@@ -2,7 +2,6 @@
   "schemaVersion": 1,
   "id": "desolation",
   "version": "${version}",
-
   "name": "Desolation",
   "description": "Wildfires bring both destruction and renewal.",
   "authors": [
@@ -13,10 +12,8 @@
     "sources": "https://github.com/raltsmc/desolation",
     "issues": "https://github.com/raltsmc/desolation/issues"
   },
-
   "license": "MIT",
   "icon": "assets/desolation/icon.png",
-
   "environment": "*",
   "entrypoints": {
     "main": [
@@ -36,7 +33,6 @@
   "mixins": [
     "desolation.mixins.json"
   ],
-
   "depends": {
     "fabricloader": ">=0.13.3",
     "fabric": "*",

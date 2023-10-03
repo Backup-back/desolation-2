@@ -8,18 +8,18 @@ import net.minecraft.util.math.random.Random;
 import net.minecraft.world.WorldAccess;
 
 public class AshLayerBlock extends SnowBlock {
-    public AshLayerBlock(Settings settings) {
-        super(settings);
+  public AshLayerBlock(Settings settings) {
+    super(settings);
+  }
+  
+  @Override
+  public void randomTick(BlockState state, ServerWorld world, BlockPos pos, Random random) {
+  }
+  
+  @Override
+  public void onBroken(WorldAccess world, BlockPos pos, BlockState state) {
+    if (state.get(LAYERS) > 1) {
+      world.setBlockState(pos, this.getDefaultState().with(LAYERS, state.get(LAYERS) - 1), 1);
     }
-
-    @Override
-    public void randomTick(BlockState state, ServerWorld world, BlockPos pos, Random random) {
-    }
-
-    @Override
-    public void onBroken(WorldAccess world, BlockPos pos, BlockState state) {
-        if (state.get(LAYERS) > 1) {
-            world.setBlockState(pos, this.getDefaultState().with(LAYERS, state.get(LAYERS) - 1), 1);
-        }
-    }
+  }
 }

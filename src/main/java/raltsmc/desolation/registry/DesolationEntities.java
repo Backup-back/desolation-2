@@ -16,30 +16,30 @@ import raltsmc.desolation.entity.AshScuttlerEntity;
 import raltsmc.desolation.entity.BlackenedEntity;
 
 public final class DesolationEntities {
-
-    public static final EntityType<AshScuttlerEntity> ASH_SCUTTLER = Registry.register(
-            Registries.ENTITY_TYPE,
-            Desolation.id("ash_scuttler"),
-            FabricEntityTypeBuilder.<AshScuttlerEntity>create(SpawnGroup.AMBIENT, AshScuttlerEntity::new)
-                    .dimensions(EntityDimensions.fixed(0.56f,0.32f))
-                    .fireImmune()
-                    .build()
-    );
-
-    public static final EntityType<BlackenedEntity> BLACKENED = Registry.register(
-            Registries.ENTITY_TYPE,
-            Desolation.id("blackened"),
-            FabricEntityTypeBuilder.<BlackenedEntity>create(SpawnGroup.MONSTER, BlackenedEntity::new)
-                    .dimensions(EntityDimensions.fixed(0.75f,2f))
-                    .fireImmune()
-                    .build()
-    );
-
-    static void init() {
-        FabricDefaultAttributeRegistry.register(ASH_SCUTTLER, AshScuttlerEntity.createMobAttributes());
-        FabricDefaultAttributeRegistry.register(BLACKENED, BlackenedEntity.createBlackenedAttributes());
-
-        SpawnRestriction.register(ASH_SCUTTLER, SpawnRestriction.Location.ON_GROUND, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, MobEntity::canMobSpawn);
-        SpawnRestriction.register(BLACKENED, SpawnRestriction.Location.ON_GROUND, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, HostileEntity::canMobSpawn);
-    }
+  
+  public static final EntityType<AshScuttlerEntity> ASH_SCUTTLER = Registry.register(
+    Registries.ENTITY_TYPE,
+    Desolation.id("ash_scuttler"),
+    FabricEntityTypeBuilder.create(SpawnGroup.AMBIENT, AshScuttlerEntity::new)
+      .dimensions(EntityDimensions.fixed(0.56f, 0.32f))
+      .fireImmune()
+      .build()
+  );
+  
+  public static final EntityType<BlackenedEntity> BLACKENED = Registry.register(
+    Registries.ENTITY_TYPE,
+    Desolation.id("blackened"),
+    FabricEntityTypeBuilder.create(SpawnGroup.MONSTER, BlackenedEntity::new)
+      .dimensions(EntityDimensions.fixed(0.75f, 2f))
+      .fireImmune()
+      .build()
+  );
+  
+  static void init() {
+    FabricDefaultAttributeRegistry.register(ASH_SCUTTLER, AshScuttlerEntity.createMobAttributes());
+    FabricDefaultAttributeRegistry.register(BLACKENED, BlackenedEntity.createBlackenedAttributes());
+    
+    SpawnRestriction.register(ASH_SCUTTLER, SpawnRestriction.Location.ON_GROUND, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, MobEntity::canMobSpawn);
+    SpawnRestriction.register(BLACKENED, SpawnRestriction.Location.ON_GROUND, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, HostileEntity::canMobSpawn);
+  }
 }

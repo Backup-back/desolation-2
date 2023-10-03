@@ -1,5 +1,7 @@
 {
   "variants": {
-    "": { "model": "desolation:block/cooled_ember_block" }
+    "": {
+      "model": "desolation:block/cooled_ember_block"
+    }
   }
 }

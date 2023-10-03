@@ -14,15 +14,15 @@ import static raltsmc.desolation.init.client.DesolationClient.HEAD_GOGGLES_LAYER
 import static raltsmc.desolation.init.client.DesolationClient.HEAD_MASK_LAYER;
 
 public class TrinketRenderers implements SimpleSynchronousResourceReloadListener {
-
-    @Override
-    public void reload(ResourceManager manager) {
-        TrinketRendererRegistry.registerRenderer(DesolationItems.MASK, new HeadTrinketRenderer("textures/entity/ash_tinkerer_headgear.png", new HeadTrinketModel(MinecraftClient.getInstance().getEntityModelLoader().getModelPart(HEAD_MASK_LAYER))));
-        TrinketRendererRegistry.registerRenderer(DesolationItems.GOGGLES, new HeadTrinketRenderer("textures/entity/ash_tinkerer_headgear.png",  new HeadTrinketModel(MinecraftClient.getInstance().getEntityModelLoader().getModelPart(HEAD_GOGGLES_LAYER), RenderLayer::getEntityTranslucent)));
-    }
-
-    @Override
-    public Identifier getFabricId() {
-        return Desolation.id("trinket_renderers");
-    }
+  
+  @Override
+  public void reload(ResourceManager manager) {
+    TrinketRendererRegistry.registerRenderer(DesolationItems.MASK, new HeadTrinketRenderer("textures/entity/ash_tinkerer_headgear.png", new HeadTrinketModel(MinecraftClient.getInstance().getEntityModelLoader().getModelPart(HEAD_MASK_LAYER))));
+    TrinketRendererRegistry.registerRenderer(DesolationItems.GOGGLES, new HeadTrinketRenderer("textures/entity/ash_tinkerer_headgear.png", new HeadTrinketModel(MinecraftClient.getInstance().getEntityModelLoader().getModelPart(HEAD_GOGGLES_LAYER), RenderLayer::getEntityTranslucent)));
+  }
+  
+  @Override
+  public Identifier getFabricId() {
+    return Desolation.id("trinket_renderers");
+  }
 }
